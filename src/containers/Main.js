@@ -6,7 +6,7 @@ import { bindActionCreators } from 'redux';
 import orderBy from 'lodash/orderBy';
 // помещаем все actions из ../actions/books в переменную booksActions
 import * as booksActions from '../actions/books';
-import Main from '../components/Main';
+import App from '../components/Main';
 import * as filterActions from "../actions/filter";
 
 // функция для сортировки sortBy принимает массив с книгами и состояние filterBy из props
@@ -46,11 +46,11 @@ const filterCheckbox = (earphones, checkboxes) => {
 
     let newList = [];
     if(queries.length > 0){
-        // из старого массива в новый будем брать только те объекты, где поставщик = true
-        for (let query of queries){
-            let cicleResult = [...earphones].filter(e => e.author === query);
-            newList = newList.concat(cicleResult);
-        }
+    // из старого массива в новый будем брать только те объекты, где поставщик = true
+    for (let query of queries){
+        let cicleResult = [...earphones].filter(e => e.author === query);
+        newList = newList.concat(cicleResult);
+    }
     }
     else {
         newList = [...earphones];
@@ -84,10 +84,9 @@ const mapDispatchToProps = dispatch => ({
     // bindActionCreators превращает action в метод, пример:
     // setBooks: books => dispatch(setBooks(books))
     ...bindActionCreators(booksActions, dispatch),
-    ...bindActionCreators(filterActions, dispatch),
 });
 
 
 // Метод connect принимает 2 функции(вообще аргументов может быть 4): первая возвращает состояние, вторая - методы , переносят их в props.
 // Так как функция возвращает компонент высшего порядка, её нужно вызвать повторно, передав базовый компонент React, для того, чтобы конвертировать его в компонент
-export default connect(mapStateToProps, mapDispatchToProps)(Main);
+export default connect(mapStateToProps, mapDispatchToProps)(App);

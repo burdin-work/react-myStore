@@ -3,6 +3,7 @@ body {
     background-color: #f5f5f5;
     color: rgb(100, 100, 100);
     font-family: 'Open Sans' ;
+    overflow-y: scroll;
 }
 
 ul {
@@ -16,6 +17,17 @@ li {
 
 h1,h2,h3 {
     font-family: "Ubuntu";
+    margin-bottom: 30px;
+}
+
+p {
+    font-size: 16px;
+    font-family: BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    text-indent: 20px;
+}
+
+.other_pages {
+    margin-bottom: 100px;
 }
 
 .wrap {
@@ -62,7 +74,7 @@ header {
 
 /* Search */
 div.search {
-
+    text-decoration: none;
 }
 
 div.search input {
@@ -70,27 +82,33 @@ div.search input {
     box-shadow: 0 0 5px rgba(0,0,0,0.3) !important;
 }
 
-div.search button.button {
+div.search a {
+    position: relative;
+    width: 18px;
     border-radius: 0 50% 50% 0 !important;
-    background-color: #ef9021;
-    border: #ef9021 1px solid;
+    background-color: #ef9021 !important;
+    border: #ef9021 1px solid !important;
     box-shadow: 0 0 3px rgba(0,0,0,0.45) !important;
 
 }
 
-div.search button.button:hover,
-div.search button.button:focus{
+div.search a:hover,
+div.search a:focus{
     background-color: #ef9021;
 }
 
-div.search button.button:active {
+div.search a:active {
     transform: translateX(.5px);
     filter: saturate(110%);
     background-color: #ef9021;
 }
 
-i.search.icon{
-    color: #fff;
+div.search i{
+    position: absolute;
+    left: 12px;
+    top: 9px;
+    font-size: 16px;
+    color:white;
 }
 
 /* phone number */
@@ -344,3 +362,51 @@ a.price {
     filter: saturate(130%);
 }
 
+
+/* Contacts */
+.contacts > dl > div {
+    padding-left: 18px;/* 139-121 */
+    border-bottom: 1px solid #d9d9d9;
+    padding-bottom: 24px;
+}
+
+dt {
+    font-size: 14px;
+    text-transform: uppercaWse;
+    font-weight: bold;
+    line-height: 1.75;
+    /*float: left;*/
+    width: 170px;
+    padding-right: 120px;
+}
+
+dd {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.75;
+    float: left;
+}
+
+.contacts__schedule  {
+
+}
+
+/* Buttons */
+.address__link,
+.soc-links__a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.address__link {
+    display: block;
+    width: 268px;
+    height: 38px;
+    line-height: 38px;/* выравнивание текста по центру */
+    border: solid 1px #72a11c;
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}

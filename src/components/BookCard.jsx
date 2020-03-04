@@ -1,5 +1,6 @@
 import React from 'react';
 import {Card, Image, Icon, Button} from 'semantic-ui-react';
+import {Link} from "react-router-dom";
 
 // параметры будут браться из props
 const BookCard = (book) => {
@@ -7,7 +8,9 @@ const BookCard = (book) => {
 
     return (
         <Card>
+            <Link to={`/models/${title}`}>
             <Image src={image}/>
+            </Link>
             <Card.Content>
                 <Card.Header>{title}</Card.Header>
                 <Card.Meta>
