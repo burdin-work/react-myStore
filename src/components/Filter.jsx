@@ -15,10 +15,9 @@ const Filter = ({setFilter, filterBy, searchQuery, setSearchQuery, setDisplaying
     {key: 5, text: '10', value: 10},
     {key: 6, text: '25', value: 25},
     {key: 7, text: '50', value: 50},
-    {key: 8, text: '100', value: 100},
 ];
 
-    const sortBooks = (obj) => {
+    const sortgoods = (obj) => {
         switch (obj.value) {
 
             case 'price_high':
@@ -37,7 +36,7 @@ const Filter = ({setFilter, filterBy, searchQuery, setSearchQuery, setDisplaying
         }
     };
 
-    const displayBooks = (obj) => {
+    const displaygoods = (obj) => {
         switch (obj.value) {
 
             case 10:
@@ -79,8 +78,8 @@ const Filter = ({setFilter, filterBy, searchQuery, setSearchQuery, setDisplaying
 
     return (
 <div className="dropdown-wrap wrap">
-            {renderComponentDropdown(optionsSorting, sortBooks, 'Сортировать:', "Все")}
-            {renderComponentDropdown(optionsDisplaying, displayBooks, 'Показывать:', "50")}
+            {renderComponentDropdown(optionsSorting, sortgoods, 'Сортировать:', "Все")}
+            {renderComponentDropdown(optionsDisplaying, displaygoods, 'Показывать:', "50")}
 </div>
     );
 };

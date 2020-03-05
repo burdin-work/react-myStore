@@ -64,7 +64,7 @@ p {
 
 header {
     box-shadow: 0 0 25px rgba(0,0,0,0.3);
-    background: url("/img/fon3.jpg")  repeat 83% 0%;
+    background: url("/img/bg.jpg")  repeat 83% 0%;
     outline: none;
     border-radius: 6px;
     transition: 0.2s;
@@ -315,7 +315,7 @@ form.manufacturers label input{
 }
 
 
-/* Bookcard */
+/* Card */
 div.ui.card {
     box-shadow: none !important;
 }
@@ -362,6 +362,10 @@ a.price {
     filter: saturate(130%);
 }
 
+div.ui.card span.date {
+
+}
+
 
 /* Contacts */
 .contacts > dl > div {
@@ -372,7 +376,7 @@ a.price {
 
 dt {
     font-size: 14px;
-    text-transform: uppercaWse;
+    text-transform: uppercase;
     font-weight: bold;
     line-height: 1.75;
     /*float: left;*/
@@ -391,7 +395,6 @@ dd {
 
 }
 
-/* Buttons */
 .address__link,
 .soc-links__a {
     color: inherit;
@@ -410,3 +413,53 @@ dd {
     text-align: center;
     margin-top: 10px;
 }
+
+/* Selected item */
+
+
+.selected-item {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin-bottom: 100px;
+    max-height: 70vh;
+
+}
+
+
+.selected-item__img img{
+    display: block;
+    height: auto;
+    max-width: 100%;
+    min-width: 200px;
+    max-height: 70vh;
+}
+
+.selected-item .product-list{
+     padding-left: 70px;
+    max-width: 550px
+ }
+
+.product-list .card{
+    height: 100%;
+}
+
+.selected-item .product-list li{
+    padding: 1.5vw;
+}
+
+.card__button {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.card__button a {
+    width: 100%;
+}
+
+.card__button .ui.button{
+    padding: 1em .4em;
+}
+

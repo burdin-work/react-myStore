@@ -23,7 +23,7 @@ const MenuComponent = ({totalPrice, count, items, searchQuery, setSearchQuery}) 
             <div className="menu__item"
                  name='browse'
                  onClick={this}>
-                <img src="logo2.png" className="logo" alt="logo"/>
+                <Link to="/"><img src="logo2.png" className="logo" alt="logo"/></Link>
             </div>
             <div className="communications-wrap">
                 <div className="phone communication">
@@ -60,7 +60,7 @@ const MenuComponent = ({totalPrice, count, items, searchQuery, setSearchQuery}) 
                             (<b>{count}</b>)
                         </div>
                     }
-                    content={count > 0 ? items.map(book => <CartComponent {...book} />) : 'В корзине пусто...'}
+                    content={count > 0 ? items.map(item => <CartComponent {...item} />) : 'В корзине пусто...'}
                     on="click"
                 />
             </div>

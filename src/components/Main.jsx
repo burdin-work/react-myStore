@@ -5,14 +5,13 @@ import {Card} from 'semantic-ui-react';
 import axios from 'axios';
 import Filter from '../containers/Filter';
 import Manufacturers from '../containers/Manufacturers';
-import BookCard from '../containers/BookCard';
+import ItemCard from '../containers/Card';
+import SelectedItem from '../containers/SelectedItem';
 
 import {
     BrowserRouter as Router,
     Switch,
     Route,
-    useRouteMatch,
-    useParams
 } from "react-router-dom";
 import About_us from "../index";
 
@@ -22,50 +21,48 @@ class Main extends Component {
     // перед тем как компонент начнет рендерится, мы будем отправлять запрос на сервер чтобы получить нужные данные и перенести их в   хранилище
     componentWillMount() {
         // при помощи метода  connect + функции mapDispatchToProps были перенесены actions в props. Получение каждого action происходит как вызов метода
-        const {setBooks} = this.props;
+        const {setGoods} = this.props;
         // производим запрос, в случае успеха - принимаем в функцию содержимое data из объекта с ответом (ES6)
         axios.get('/headphones.json').then(({data}) => {
             // передаём массив с книгами в action
-            setBooks(data);
+            setGoods(data);
 
         });
     }
+
+
 
     // при помощи метода connect + функции mapStateToProps были перенесены состояния из хранилища в props
     // берем нужные состояния из props, помещаем их в переменные (ES6)
     render() {
 
-        const {books, isReady} = this.props;
-
-
+        const { goods, isReady } = this.props;
 
         return (
             <div>
                 <Router>
-                            <main>
+                    <main>
+                        <Switch>
+
+                            <Route path="/:id" component={SelectedItem}/>
+
+                            <Route path="/">
                                 <Manufacturers/>
                                 <div>
                                     <Filter/>
-                                    <Switch>
-
-                                        <Route path="/models">
-                                            <h1>MODELS</h1>
-                                        </Route>
-
-                                        <Route path="/">
-                                            <Card.Group itemsPerRow={3}>
-                                                {!isReady
-                                                    ? 'Загрузка...'
-                                                    : books.map((book, i) => (
-                                                        <BookCard key={i} {...book}/>
-                                                    ))
-                                                }
-                                            </Card.Group>
-                                        </Route>
-
-                                    </Switch>
+                                    <Card.Group itemsPerRow={3}>
+                                        {!isReady
+                                            ? 'Загрузка...'
+                                            : goods.map((item, i) => (
+                                                <ItemCard key={i} {...item} />
+                                            ))
+                                        }
+                                    </Card.Group>
                                 </div>
-                            </main>
+                            </Route>
+
+                        </Switch>
+                    </main>
                 </Router>
             </div>
         )

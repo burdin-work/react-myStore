@@ -14,6 +14,7 @@ import About_us from './components/navigation/About_us';
 import Delivery from './components/navigation/Delivery';
 import Contacts from './components/navigation/Contacts';
 import Repairs from './components/navigation/Repairs';
+import Test from './test.js';
 
 
 // библиотека react-router-dom позволяет точечно изменять разметку при переходе на новый URL
@@ -55,7 +56,7 @@ ReactDOM.render(
                         <Route path="/repairs">
                             <Repairs />
                         </Route>
-                        <Route path="/">
+                        <Route path="/:filter?">
                             <Main />
                         </Route>
 

@@ -2,13 +2,13 @@
 
 // Обьединяем все reducers в одну функцию
 import {combineReducers} from 'redux';
-// default функция-reducer из файла ./books.js
-import books from './books';
+// default функция-reducer из файла ./goods.js
+import goods from './goods';
 import cart from './cart';
 import filter from './filter';
 
 export default combineReducers({
-    books,
+    goods,
     cart,
     filter
 })

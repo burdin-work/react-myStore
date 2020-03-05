@@ -4,32 +4,33 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 // lodash - библиотека с методами для фильтрации, сортировки и множеством других (здесь используем декларативный подход при импорте)
 import orderBy from 'lodash/orderBy';
-// помещаем все actions из ../actions/books в переменную booksActions
-import * as booksActions from '../actions/books';
+// помещаем все actions из ../actions/goods в переменную goodsActions
+import * as goodsActions from '../actions/goods';
 import App from '../components/Main';
 import * as filterActions from "../actions/filter";
+import * as cartActions from "../actions/cart";
 
 // функция для сортировки sortBy принимает массив с книгами и состояние filterBy из props
-const sortBy = (books, filterBy) => {
+const sortBy = (goods, filterBy) => {
 
     switch (filterBy) {
 
         case 'price_high':
             // метод orderBy принимает 3 параметра: массив, ключ(или массив с ключами) и способ сортировки (desc, asc)
-            return orderBy(books, 'price', 'desc');
+            return orderBy(goods, 'price', 'desc');
         case 'price_low':
-            return orderBy(books, 'price', 'asc');
+            return orderBy(goods, 'price', 'asc');
         case 'author':
-            return orderBy(books, 'author', 'asc');
+            return orderBy(goods, 'author', 'asc');
 
         default:
-            return orderBy(books, 'id', 'desc');
+            return orderBy(goods, 'id', 'asc');
     }
 };
 
-// функция фильтрации через поиск принимает books и searchQuery из props
-const searchBooks = (books, searchQuery) =>
-    books.filter(
+// функция фильтрации через поиск принимает goods и searchQuery из props
+const searchgoods = (goods, searchQuery) =>
+    goods.filter(
         o =>
             o.title.toLowerCase().indexOf(searchQuery.toLowerCase()) >= 0 ||
             o.author.toLowerCase().indexOf(searchQuery.toLowerCase()) >= 0,
@@ -60,30 +61,33 @@ const filterCheckbox = (earphones, checkboxes) => {
 };
 
 
-// функция окончательной сортировки, которая учитывая результат фильтрации через filterBooks (по поиску), возвращает отсортированый массив через функцию sortBy
-const finalSortBooks = (books, filterBy, searchQuery, numDisplays, checkboxManufacturers) => {
+// функция окончательной сортировки, которая учитывая результат фильтрации через filtergoods (по поиску), возвращает отсортированый массив через функцию sortBy
+const finalSortGoods = (goods, filterBy, searchQuery, numDisplays, checkboxManufacturers) => {
 
 
-    return sortBy(searchBooks(filterCheckbox(books, checkboxManufacturers), searchQuery), filterBy).slice(0, numDisplays);
+    return sortBy(searchgoods(filterCheckbox(goods, checkboxManufacturers), searchQuery), filterBy).slice(0, numDisplays);
 };
 
 
 // переносим состояния из reducers\index.js в props
 // данная функция будет запускаться через connect каждый раз при изменении состояния в хранилище и перезаписывать данные в props
-const mapStateToProps = ({ books, filter }) => ({
-    // массив с книгами сортируется, если books.items !== null
-    books: books.items &&
-        finalSortBooks(books.items, filter.filterBy, filter.searchQuery, filter.numDisplays, filter.checkboxManufacturers),
-    isReady: books.isReady,
+const mapStateToProps = ({ goods, filter }) => ({
+    // массив с книгами сортируется, если goods.items !== null
+    goods: goods.items &&
+        finalSortGoods(goods.items, filter.filterBy, filter.searchQuery, filter.numDisplays, filter.checkboxManufacturers),
+    isReady: goods.isReady,
+    selectedItem: goods.selectedItem
 });
 
 
-// переносим actions  из ./actions/books/books.js в props
+// переносим actions  из ./actions/goods/goods.js в props
 // запускается  через connect 1 раз при первой загрузке
 const mapDispatchToProps = dispatch => ({
     // bindActionCreators превращает action в метод, пример:
-    // setBooks: books => dispatch(setBooks(books))
-    ...bindActionCreators(booksActions, dispatch),
+    // setGoods: goods => dispatch(setGoods(goods))
+    ...bindActionCreators(goodsActions, dispatch),
+    ...bindActionCreators(filterActions, dispatch),
+    ...bindActionCreators(cartActions, dispatch),
 });
 
 

@@ -4,13 +4,14 @@ const initialState = {
     isReady: false,
     // items будет содержать список книг в виде объектов
     items: null,
+    selectedItem: 'nothing...',
 };
 
 // reducer - чистая функция. Получает два параметра: 1- первоначальные состояния и 2- action изменяющее состояния
 export default (state = initialState, action) => {
     switch (action.type) {
 
-        case 'SET_BOOKS':
+        case 'SET_ITEMS':
             return {
                 // копия содежимого массива
                 ...state,
@@ -23,6 +24,14 @@ export default (state = initialState, action) => {
                 ...state,
                 isReady: action.payload
             };
+
+        case 'OPEN_ITEM':
+            return {
+                ...state,
+                selectedItem: action.payload
+            };
+
+
 
         default:
             return state;

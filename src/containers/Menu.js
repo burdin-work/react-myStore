@@ -8,8 +8,8 @@ import * as filterActions from "../actions/filter";
 
 // получаем items из reducers\cart.js , создаём нужные состояния и переносим их в props
 const mapStateToProps = ({ cart }) => ({
-    //  применяем функцию к каждому элементу массива, суммируем все book.price и возвращаем итоговый результат
-    totalPrice: cart.items.reduce((total,book) => total + book.price, 0),
+    //  применяем функцию к каждому элементу массива, суммируем все item.price и возвращаем итоговый результат
+    totalPrice: cart.items.reduce((total,item) => total + item.price, 0),
     count: cart.items.length,
     items: uniqBy(cart.items, o => o.id),
 });
