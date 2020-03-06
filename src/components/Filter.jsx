@@ -79,7 +79,7 @@ const Filter = ({setFilter, filterBy, searchQuery, setSearchQuery, setDisplaying
     return (
 <div className="dropdown-wrap wrap">
             {renderComponentDropdown(optionsSorting, sortgoods, 'Сортировать:', "Все")}
-            {renderComponentDropdown(optionsDisplaying, displaygoods, 'Показывать:', "50")}
+            {renderComponentDropdown(optionsDisplaying, displaygoods, 'Показывать:', "10")}
 </div>
     );
 };

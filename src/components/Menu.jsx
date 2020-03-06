@@ -25,13 +25,13 @@ const MenuComponent = ({totalPrice, count, items, searchQuery, setSearchQuery}) 
                  onClick={this}>
                 <Link to="/"><img src="logo2.png" className="logo" alt="logo"/></Link>
             </div>
-            <div className="communications-wrap">
+
                 <div className="phone communication">
                     <a href="tel:+380636930963">+38 (063) 693-09-63</a></div>
                 <div className="telegram communication">
                     <a href="tg://resolve?domain=<USERNAME>"> @ music _ store </a>
                 </div>
-            </div>
+
             <div className="menu__item">
                 <div className="ui action input search">
                     <input
@@ -60,7 +60,17 @@ const MenuComponent = ({totalPrice, count, items, searchQuery, setSearchQuery}) 
                             (<b>{count}</b>)
                         </div>
                     }
-                    content={count > 0 ? items.map(item => <CartComponent {...item} />) : 'В корзине пусто...'}
+                    content={count > 0 ? <div>
+                            {items.map(item => <CartComponent {...item} key={item.id}/>)}
+                            <Link className="popup-checkout" to="/checkout">
+                                    <div
+                                        className="checkout__button"
+                                    >Оформить<br/>заказ
+                                    </div>
+                            </Link>
+                        </div>
+                        : 'В корзине пусто...'
+                    }
                     on="click"
                 />
             </div>

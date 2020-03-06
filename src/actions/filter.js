@@ -17,3 +17,8 @@ export const setCheckboxManufacturers = filter => ({
     type: 'SET_CHECKBOX_MANUFACTURERS',
     payload: filter
 });
+
+export const setMoreGoods = filter => ({
+    type: 'MORE_GOODS',
+    payload: filter
+});

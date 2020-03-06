@@ -7,11 +7,12 @@ import Filter from '../containers/Filter';
 import Manufacturers from '../containers/Manufacturers';
 import ItemCard from '../containers/Card';
 import SelectedItem from '../containers/SelectedItem';
+import MoreGoods from '../containers/MoreGoods';
 
 import {
     BrowserRouter as Router,
     Switch,
-    Route,
+    Route, Link,
 } from "react-router-dom";
 import About_us from "../index";
 
@@ -31,20 +32,21 @@ class Main extends Component {
     }
 
 
-
     // при помощи метода connect + функции mapStateToProps были перенесены состояния из хранилища в props
     // берем нужные состояния из props, помещаем их в переменные (ES6)
     render() {
 
-        const { goods, isReady } = this.props;
+        const {goods, isReady} = this.props;
 
         return (
             <div>
                 <Router>
                     <main>
+
                         <Switch>
 
                             <Route path="/:id" component={SelectedItem}/>
+
 
                             <Route path="/">
                                 <Manufacturers/>
@@ -58,6 +60,7 @@ class Main extends Component {
                                             ))
                                         }
                                     </Card.Group>
+                                    <MoreGoods/>
                                 </div>
                             </Route>
 

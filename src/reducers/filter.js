@@ -3,7 +3,7 @@ const initialState = {
     searchQuery: '',
     // сортировка по умолчанию
     filterBy: 'all',
-    numDisplays: 50,
+    numDisplays: 10,
     // по умолчание отображаем всех производителей
     checkboxManufacturers: [
         {name: 'beats', switcher: true},
@@ -58,6 +58,12 @@ export default (state = initialState, action) => {
                 checkboxManufacturers: [
                     ...checkboxes
                 ]
+            };
+
+        case 'MORE_GOODS':
+            return {
+                ...state,
+                numDisplays: state.numDisplays + action.payload
             };
 
         default:
