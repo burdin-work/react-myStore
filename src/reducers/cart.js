@@ -24,7 +24,6 @@ export default (state = initialState, action) => {
                 // если id развен тому, который мы передали, то данный объект исключаем из массива
                 items: state.items.filter(o => o.id !== action.payload)
             };
-            break;
 
         default:
             return state;

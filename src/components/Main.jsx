@@ -12,9 +12,8 @@ import MoreGoods from '../containers/MoreGoods';
 import {
     BrowserRouter as Router,
     Switch,
-    Route, Link,
+    Route
 } from "react-router-dom";
-import About_us from "../index";
 
 
 class Main extends Component {

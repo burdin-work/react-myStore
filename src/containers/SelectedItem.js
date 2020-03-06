@@ -6,7 +6,7 @@ import SelectedItem from '../components/SelectedItem';
 
 
 const mapStateToProps = (story, ownProps) => {
-console.log('ownProps.match=',ownProps.match.params);
+
     const selectedItem = story.goods.items && story.goods.items.filter(item => item.title === ownProps.match.params.id)[0];
 
     if (selectedItem) {

@@ -1,7 +1,6 @@
 import React from 'react';
-import {Popup, List, Button, Image, Input, Icon} from 'semantic-ui-react'
+import {Popup, List, Button, Image, Icon} from 'semantic-ui-react'
 import {Link} from "react-router-dom";
-import {Menu} from "semantic-ui-react/dist/commonjs/collections/Menu";
 // Компонент отображает книгу в корзине
 const CartComponent = ({title, id, image, removeFromCart}) => (
     <List selection divided verticalAlign='middle'>

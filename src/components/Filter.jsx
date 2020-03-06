@@ -1,5 +1,5 @@
 import React from 'react'
-import {Input, Dropdown} from 'semantic-ui-react'
+import { Dropdown} from 'semantic-ui-react'
 
 const Filter = ({setFilter, filterBy, searchQuery, setSearchQuery, setDisplaying}) => {
 

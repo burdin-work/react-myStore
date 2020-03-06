@@ -1,12 +1,12 @@
 import React from 'react';
-import {Card, Image, Icon, Button} from 'semantic-ui-react';
+import {Card, Image, Button} from 'semantic-ui-react';
 import {Link} from "react-router-dom";
 
 
 // параметры будут браться из props
 const ItemCard = (props) => {
     const {title, description, price, image, addToCart, addedCount, openSelectedItem} = props;
-    console.log(props);
+
     return (
         <Card>
             <Link
@@ -24,9 +24,9 @@ const ItemCard = (props) => {
 
             </Card.Content>
             <Card.Content extra>
-                <a className="price">
+                <div className="price">
                     {price} <b>грн</b>
-                </a>
+                </div>
             </Card.Content>
             <div className="button-wrap"><Button onClick={addToCart.bind(this, props)}>Добавить в
                 корзину {addedCount > 0 && `(${addedCount})`}</Button></div>
