@@ -8,7 +8,7 @@ const Filter = ({setFilter, filterBy, searchQuery, setSearchQuery, setDisplaying
         {key: 1, text: 'Все', value: 'all'},
         {key: 2, text: 'От дорогих к дешевым', value: 'price_high'},
         {key: 3, text: 'От дешевых к дорогим', value: 'price_low'},
-        {key: 4, text: 'По автору', value: 'author'},
+        {key: 4, text: 'По производителям', value: 'author'},
     ];
 
     const optionsDisplaying = [

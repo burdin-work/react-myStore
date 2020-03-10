@@ -47,7 +47,7 @@ const MenuComponent = ({totalPrice, count, items, searchQuery, setSearchQuery}) 
             <div className="menu__items-wrap wrap">
                 <div className="menu__item"
                      onClick={this}>
-                    Итого:&nbsp;<b>{totalPrice}</b>&nbsp;руб.
+                    Итого:&nbsp;<b>{totalPrice}</b>&nbsp;грн.
                 </div>
 
                 <Popup
