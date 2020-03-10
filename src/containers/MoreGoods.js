@@ -4,9 +4,8 @@ import * as filterActions from '../actions/filter';
 import MoreGoods from '../components/MoreGoods';
 
 
-const mapStateToProps = ({ filter, goods }) => ({
+const mapStateToProps = ({ filter }) => ({
     numDisplays: filter.numDisplays,
-    goodsLength: goods.items ? goods.items.length : 0
 });
 
 

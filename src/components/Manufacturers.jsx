@@ -11,7 +11,9 @@ const Manufacturers = ({checkboxManufacturers, setCheckboxManufacturers}) => {
                 <li className="form__list-item" key={`checkbox_${checkboxManufacturers[i].name}`}>
                     <label>
                         <input type="checkbox" value={i}
-                               onChange={e => setCheckboxManufacturers(e.target.value)}/>
+                               onChange={e => setCheckboxManufacturers(e.target.value)}
+                        />
+
                         {checkboxManufacturers[i].name}
                     </label>
                 </li>

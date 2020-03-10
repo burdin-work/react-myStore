@@ -1,8 +1,8 @@
 import React from 'react';
 
-const MoreGoods = ({numDisplays, setMoreGoods, goodsLength}) => {
+const MoreGoods = ({numDisplays, setMoreGoods}) => {
 
-if(numDisplays < goodsLength) {
+
     return (
         <div className="moregoods">
             <div
@@ -12,9 +12,7 @@ if(numDisplays < goodsLength) {
             </div>
         </div>
     );
-}else {
-    return <div> </div>
-}
+
 };
 
 export default MoreGoods;

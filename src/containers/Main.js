@@ -65,7 +65,7 @@ const filterCheckbox = (earphones, checkboxes) => {
 const finalSortGoods = (goods, filterBy, searchQuery, numDisplays, checkboxManufacturers) => {
 
 
-    return sortBy(searchgoods(filterCheckbox(goods, checkboxManufacturers), searchQuery), filterBy).slice(0, numDisplays);
+    return sortBy(searchgoods(filterCheckbox(goods, checkboxManufacturers), searchQuery), filterBy);
 };
 
 
@@ -74,9 +74,12 @@ const finalSortGoods = (goods, filterBy, searchQuery, numDisplays, checkboxManuf
 const mapStateToProps = ({ goods, filter }) => ({
     // массив с книгами сортируется, если goods.items !== null
     goods: goods.items &&
-        finalSortGoods(goods.items, filter.filterBy, filter.searchQuery, filter.numDisplays, filter.checkboxManufacturers),
+        finalSortGoods(goods.items, filter.filterBy, filter.searchQuery, filter.numDisplays, filter.checkboxManufacturers).slice(0, filter.numDisplays),
+    goodsLength: goods.items &&
+        finalSortGoods(goods.items, filter.filterBy, filter.searchQuery, filter.numDisplays, filter.checkboxManufacturers).length,
     isReady: goods.isReady,
-    selectedItem: goods.selectedItem
+    selectedItem: goods.selectedItem,
+    numDisplays: filter.numDisplays,
 });
 
 

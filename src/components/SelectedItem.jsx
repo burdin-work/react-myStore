@@ -12,7 +12,7 @@ const SelectedItem = (props) => {
         return (
             <div className="selected-item">
                 <div className="selected-item__img img-fluid">
-                    <img src={selectedItem.image}/>
+                    <img src={selectedItem.image} alt=""/>
                 </div>
                 <div className="product-list">
                     <div className="card">

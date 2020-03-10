@@ -35,7 +35,16 @@ class Main extends Component {
     // берем нужные состояния из props, помещаем их в переменные (ES6)
     render() {
 
-        const {goods, isReady} = this.props;
+
+        const {goods, isReady, numDisplays, goodsLength} = this.props;
+
+        const showButtMoreGoods = (goods, numDisplays) => {
+            if (numDisplays < goodsLength) {
+                return <MoreGoods />
+            } else {
+                return <div></div>
+            }
+        }
 
         return (
             <div>
@@ -59,7 +68,7 @@ class Main extends Component {
                                             ))
                                         }
                                     </Card.Group>
-                                    <MoreGoods/>
+                                    {showButtMoreGoods(goods, numDisplays)}
                                 </div>
                             </Route>
 
