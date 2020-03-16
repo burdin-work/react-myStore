@@ -1,29 +1,51 @@
 import React from 'react';
 
-const Checkout = () => (
-        <div className="checkout">
-            <form className="form" action="#"  noValidate autoComplete="">
 
-                <fieldset className="main-data">
-                    <legend className="main-data__legend">Оформление заказа</legend>
+// будем в GET-запросе вместе с именем и номером телефона, также id покупаемых товаров
+const renderCheckoutItems = (items) => {
 
-                    <div className="form__group">
-                        <label htmlFor="user_name"></label>
-                        <input className="bg-img" type="text" name="user_name" id="user_name" placeholder="Имя"
-                               required/>
-                    </div>
+    let content = [];
+    for (let i = 0; i < items.length; i++) {
 
-                    <div className="form__group">
-                        <label htmlFor="user_tel"></label>
-                        <input className="bg-img" type="tel" name="user_tel" id="user_tel" placeholder="Телефон"
-                               required/>
-                    </div>
-                </fieldset>
+        content.push(
+            <input type="text" name="itemId" defaultValue={items[i].id} key={items[i].id + '_' + i} />
+        );
+    }
+    return content;
+};
 
-                <button type="submit"  onClick={this}>Подтвердить</button>
 
-            </form>
-        </div>
-    );
+const Checkout = ({items}) => (
+    <div className="checkout">
+        <form className="form" action="#" noValidate autoComplete="">
+
+            <fieldset className="main-data">
+                <legend className="main-data__legend">Оформление заказа</legend>
+
+                <div className="form__group">
+                    <label htmlFor="user_name"></label>
+                    <input className="bg-img" type="text" name="user_name" id="user_name" placeholder="Имя"
+                           required/>
+                </div>
+
+                <div className="form__group">
+                    <label htmlFor="user_tel"></label>
+                    <input className="bg-img" type="tel" name="user_tel" id="user_tel" placeholder="Телефон"
+                           required/>
+                </div>
+
+
+            </fieldset>
+
+<div className="invisible-cartItems">
+                {renderCheckoutItems(items)}
+</div>
+
+
+            <button type="submit" onClick={this}>Подтвердить</button>
+
+        </form>
+    </div>
+);
 
 export default Checkout;

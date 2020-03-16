@@ -402,6 +402,10 @@ text-decoration: none;
     background-image: url(/icon-phone.svg)
 }
 
+.invisible-cartItems {
+    display: none;
+}
+
 
 /* MAIN */
 

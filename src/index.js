@@ -27,7 +27,7 @@ import {
 
 // Provider - вспомогательный метод-компонент для объединения react и redux
 import {Provider} from 'react-redux';
-import Checkout from "./components/Checkout";
+import Checkout from "./containers/Checkout";
 
 // происходит вызов default-функции из ./store.js (создается хранилище), помещение в переменную для использования в общем компоненте Provider
 const store = createStore();
