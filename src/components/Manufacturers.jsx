@@ -12,6 +12,8 @@ const Manufacturers = ({checkboxManufacturers, setCheckboxManufacturers}) => {
                     <label>
                         <input type="checkbox" value={i}
                                onChange={e => setCheckboxManufacturers(e.target.value)}
+                               name={checkboxManufacturers[i].name}
+                               checked={checkboxManufacturers[i].switcher}
                         />
 
                         {checkboxManufacturers[i].name}
@@ -22,6 +24,9 @@ const Manufacturers = ({checkboxManufacturers, setCheckboxManufacturers}) => {
 
         return content;
     };
+
+
+
 
     return (
         <div className='manufacturers-wrap'>

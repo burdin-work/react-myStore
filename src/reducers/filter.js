@@ -6,13 +6,12 @@ const initialState = {
     numDisplays: 10,
     // по умолчание отображаем всех производителей
     checkboxManufacturers: [
-        {name: 'beats', switcher: true},
-        {name: 'marshall', switcher: true},
-        {name: 'jbl', switcher: true},
-        {name: 'apple', switcher: true},
-        {name: 'razer',switcher : true}
+        {name: 'beats', switcher: false},
+        {name: 'marshall', switcher: false},
+        {name: 'jbl', switcher: false},
+        {name: 'apple', switcher: false},
+        {name: 'razer',switcher : false}
     ],
-    checkboxesChecked: false
 
 };
 
@@ -40,15 +39,9 @@ export default (state = initialState, action) => {
 
         case 'SET_CHECKBOX_MANUFACTURERS':
             let checkboxes = [];
-            // если это первое нажатие на checkbox - активируем панель с чекбоксами, где нету галочек теперь = false
-            if (!state.checkboxesChecked) {
-                checkboxes = state.checkboxManufacturers.map(item => {
-                    return {name: item.name, switcher: !item.switcher};
-                });
-                // иначе - это просто копия массива
-            } else {
-                checkboxes = [...state.checkboxManufacturers];
-            }
+
+            checkboxes = [...state.checkboxManufacturers];
+
             //action.payload = value  из props; возвращаемое значение state[value] = !state[value]
             checkboxes[action.payload].switcher = !checkboxes[action.payload].switcher;
 
