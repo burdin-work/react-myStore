@@ -1,4 +1,4 @@
-// Первоначальное состояние данных, которые будем передавать в reducers
+// The initial state of the data that will be transmitted to reducers
 const initialState = {
     items: [],
 };
@@ -8,9 +8,9 @@ export default (state = initialState, action) => {
     switch (action.type) {
 
         case 'ADD_TO_CART':
-            // возврат копии хранилища
+            // return duplicate storage
             return {
-                // копия содежимого массива + добавление нового объекта в items
+                // copy of the contents of the array + adding a new object to items
                 ...state,
                 items:[
                     ...state.items,
@@ -21,7 +21,7 @@ export default (state = initialState, action) => {
         case 'REMOVE_FROM_CART':
             return {
                 ...state,
-                // если id развен тому, который мы передали, то данный объект исключаем из массива
+                // if id is developed to the one we passed, then this object is excluded from the array
                 items: state.items.filter(o => o.id !== action.payload)
             };
 

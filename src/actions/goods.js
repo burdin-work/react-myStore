@@ -1,6 +1,6 @@
 export const setGoods = goods => ({
     type: 'SET_ITEMS',
-    // передаём в payload массив с товарами
+    // transfer to payload an array of goods
     payload: goods
 });
 

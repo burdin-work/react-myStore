@@ -1,16 +1,16 @@
-//> Единое хранилище для проекта
+//> Single repository for the project
 
-// {createStore} - метод  чтобы создавать хранилище
+// {createStore} - method to create storage
 import { createStore } from 'redux'
-// {applyMiddleware} - метод для подключения вспомогательных методов (напр. redux-logger: следит за всеми изменениями, которые происходят в хранилище + вывод в консоль
+// {applyMiddleware} - method for connecting auxiliary methods (e.g. redux-logger: monitors all changes that occur in the repository + output to the console
 import { applyMiddleware } from 'redux'
-// redux-logger - библиотека следит за всеми изменениями, которые происходят в хранилище + вывод в консоль
+// redux-logger - the library monitors all changes that occur in the repository + output to the console
 import logger from 'redux-logger'
-// default из файла reducers/index.js
+// default from file reducers/index.js
 import rootReducer from './reducers'
 
 
-// Функция объявление хранилища. функция принимает 2 параметра: функцию-reducer, которая возвращает новое состояние хранилища и вспомогательные методы хранилища (например логгер)
+// Function declaration of storage. the function takes 2 parameters: the reducer function, which returns the new state of the storage and auxiliary storage methods (for example, a logger)
 export default () => {
     const store = createStore(rootReducer, applyMiddleware(logger));
     return store

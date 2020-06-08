@@ -1,7 +1,7 @@
 import React from 'react';
 import {Popup, List, Button, Image, Icon} from 'semantic-ui-react'
 import {Link} from "react-router-dom";
-// Компонент отображает книгу в корзине
+
 const CartComponent = ({title, id, image, removeFromCart}) => (
     <List selection divided verticalAlign='middle'>
         <List.Item>
@@ -22,7 +22,7 @@ const MenuComponent = ({totalPrice, count, items, searchQuery, setSearchQuery}) 
             <div className="menu__item"
                  name='browse'
                  onClick={this}>
-                <Link to="/"><img src="logo2.png" className="logo" alt="logo"/></Link>
+                <Link to="/"><img src="./images/icons/logo.png" className="logo" alt="logo"/></Link>
             </div>
 
                 <div className="phone communication">

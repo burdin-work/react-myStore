@@ -3,13 +3,13 @@ import { bindActionCreators } from 'redux';
 import * as filterActions from '../actions/filter';
 import Filter from '../components/Filter';
 
-// получаем filterBy из reducers\filter.js и переносим в props
+// get filterBy from reducers\filter.js and transfer to props
 const mapStateToProps = ({ filter }) => ({
     filterBy: filter.filterBy
 });
 
 
-// переносим action(setFilter) из ../actions/filter.js в props
+// transfer action(setFilter) from ../actions/filter.js to props
 const mapDispatchToProps = dispatch => ({
     ...bindActionCreators(filterActions, dispatch)
 });

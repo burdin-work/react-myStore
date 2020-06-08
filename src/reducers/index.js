@@ -1,8 +1,8 @@
-//> нужен 1 reducer, который передается в функцию createStore()
+//> need 1 reducer, which is passed to createStore()
 
-// Обьединяем все reducers в одну функцию
+// Combine all reducers into one function
 import {combineReducers} from 'redux';
-// default функция-reducer из файла ./goods.js
+// default function-reducer from file ./goods.js
 import goods from './goods';
 import cart from './cart';
 import filter from './filter';

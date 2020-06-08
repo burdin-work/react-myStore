@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-// Semantic UI (общий компонент)
 import {Card} from 'semantic-ui-react';
-//axios - библиотека, предназначенная для выполнения HTTP-запросов, основана на промисах
+//axios - library designed to execute HTTP requests is based on promises
 import axios from 'axios';
 import Filter from '../containers/Filter';
 import Manufacturers from '../containers/Manufacturers';
@@ -18,21 +17,21 @@ import {
 
 class Main extends Component {
 
-    // перед тем как компонент начнет рендерится, мы будем отправлять запрос на сервер чтобы получить нужные данные и перенести их в   хранилище
+    // before the component starts rendering, we will send a request to the server to get the necessary data and transfer it to the storage
     componentWillMount() {
-        // при помощи метода  connect + функции mapDispatchToProps были перенесены actions в props. Получение каждого action происходит как вызов метода
+        // using the connect + method mapDispatchToProps transferred actions to props. Getting every action happens as a method call
         const {setGoods} = this.props;
-        // производим запрос, в случае успеха - принимаем в функцию содержимое data из объекта с ответом (ES6)
+        // make a request, if successful, we take the contents of data from the object with the response (ES6)
         axios.get('/headphones.json').then(({data}) => {
-            // передаём массив с книгами в action
+            // pass an array to action
             setGoods(data);
 
         });
     }
 
 
-    // при помощи метода connect + функции mapStateToProps были перенесены состояния из хранилища в props
-    // берем нужные состояния из props, помещаем их в переменные (ES6)
+    // using the connect + method of the mapStateToProps function, the states were transferred from the repository to props
+    // take the necessary states from props, put them in variables (ES6)
     render() {
 
 
@@ -40,7 +39,7 @@ class Main extends Component {
 
         const showButtMoreGoods = (goods, numDisplays) => {
             if (numDisplays < goodsLength) {
-                return <MoreGoods />
+                return <MoreGoods/>
             } else {
                 return <div></div>
             }
@@ -50,12 +49,8 @@ class Main extends Component {
             <div>
                 <Router>
                     <main>
-
                         <Switch>
-
                             <Route path="/:id" component={SelectedItem}/>
-
-
                             <Route path="/">
                                 <Manufacturers/>
                                 <div>

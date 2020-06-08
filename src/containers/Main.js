@@ -1,22 +1,22 @@
-// { connect } - метод для того чтобы компонент мог обращаться к хранилищу и обмениваться с ним данными. Использование функции connect() означает применение некоторых улучшений и оптимизаций производительности
-import { connect } from 'react-redux';
-// bindActionCreators - принимает action, возвращает новый объект с методами
-import { bindActionCreators } from 'redux';
-// lodash - библиотека с методами для фильтрации, сортировки и множеством других (здесь используем декларативный подход при импорте)
+// { connect } - method for the component to access the storage and exchange data with it. Using the connect () function means applying some performance improvements and optimizations.
+import {connect} from 'react-redux';
+// bindActionCreators - takes action, returns a new object with methods
+import {bindActionCreators} from 'redux';
+// lodash - library with methods for filtering, sorting and many others (here we use a declarative approach for import)
 import orderBy from 'lodash/orderBy';
-// помещаем все actions из ../actions/goods в переменную goodsActions
+// transfer all actions from ../actions/goods to variable goodsActions
 import * as goodsActions from '../actions/goods';
-import App from '../components/Main';
+import Main from '../components/Main';
 import * as filterActions from "../actions/filter";
 import * as cartActions from "../actions/cart";
 
-// функция для сортировки sortBy принимает массив с книгами и состояние filterBy из props
+// sortBy sorting function accepts goods array and state filterBy from props
 const sortBy = (goods, filterBy) => {
 
     switch (filterBy) {
 
         case 'price_high':
-            // метод orderBy принимает 3 параметра: массив, ключ(или массив с ключами) и способ сортировки (desc, asc)
+            // method orderBy takes 3 parameters: an array, a key (or an array with keys) and a sorting method (desc, asc)
             return orderBy(goods, 'price', 'desc');
         case 'price_low':
             return orderBy(goods, 'price', 'asc');
@@ -28,7 +28,7 @@ const sortBy = (goods, filterBy) => {
     }
 };
 
-// функция фильтрации через поиск принимает goods и searchQuery из props
+// search filtering function accepts goods and searchQuery from props
 const searchgoods = (goods, searchQuery) =>
     goods.filter(
         o =>
@@ -36,24 +36,23 @@ const searchgoods = (goods, searchQuery) =>
             o.author.toLowerCase().indexOf(searchQuery.toLowerCase()) >= 0,
     );
 
-// функция сортировки по checkbox
+// checkbox sorting function
 const filterCheckbox = (earphones, checkboxes) => {
 
-    // создаём массив, в который входят только те имена поставщиков, где switcher = true
-    const queries =[];
-    for (let item of checkboxes){
-        if(item.switcher) queries.push(item.name);
+    // create an array that includes only those provider names where switcher = true
+    const queries = [];
+    for (let item of checkboxes) {
+        if (item.switcher) queries.push(item.name);
     }
 
     let newList = [];
-    if(queries.length > 0){
-    // из старого массива в новый будем брать только те объекты, где поставщик = true
-    for (let query of queries){
-        let cicleResult = [...earphones].filter(e => e.author === query);
-        newList = newList.concat(cicleResult);
-    }
-    }
-    else {
+    if (queries.length > 0) {
+        // from the old array to the new we will take only those objects where the provider = true
+        for (let query of queries) {
+            let cicleResult = [...earphones].filter(e => e.author === query);
+            newList = newList.concat(cicleResult);
+        }
+    } else {
         newList = [...earphones];
     }
 
@@ -61,7 +60,7 @@ const filterCheckbox = (earphones, checkboxes) => {
 };
 
 
-// функция окончательной сортировки, которая учитывая результат фильтрации через filtergoods (по поиску), возвращает отсортированый массив через функцию sortBy
+// final sorting function, which, given the filtering result through filtergoods (by search), returns a sorted array through the sortBy function
 const finalSortGoods = (goods, filterBy, searchQuery, numDisplays, checkboxManufacturers) => {
 
 
@@ -69,10 +68,10 @@ const finalSortGoods = (goods, filterBy, searchQuery, numDisplays, checkboxManuf
 };
 
 
-// переносим состояния из reducers\index.js в props
-// данная функция будет запускаться через connect каждый раз при изменении состояния в хранилище и перезаписывать данные в props
-const mapStateToProps = ({ goods, filter }) => ({
-    // массив с книгами сортируется, если goods.items !== null
+// transfer states from reducers \ index.js to props
+// this function will be run through connect every time a state changes in the repository and overwrite data in props
+const mapStateToProps = ({goods, filter}) => ({
+    // array with goods is sorted if goods.items !== null
     goods: goods.items &&
         finalSortGoods(goods.items, filter.filterBy, filter.searchQuery, filter.numDisplays, filter.checkboxManufacturers).slice(0, filter.numDisplays),
     goodsLength: goods.items &&
@@ -83,17 +82,17 @@ const mapStateToProps = ({ goods, filter }) => ({
 });
 
 
-// переносим actions  из ./actions/goods/goods.js в props
-// запускается  через connect 1 раз при первой загрузке
+// transfer actions from ./actions/goods/goods.js to props
+// run through connect 1 time on first boot
 const mapDispatchToProps = dispatch => ({
-    // bindActionCreators превращает action в метод, пример:
-    // setGoods: goods => dispatch(setGoods(goods))
+    // bindActionCreators turns action into a method, example:
+    // setGoods: goods => dispatch (setGoods (goods))
     ...bindActionCreators(goodsActions, dispatch),
     ...bindActionCreators(filterActions, dispatch),
     ...bindActionCreators(cartActions, dispatch),
 });
 
 
-// Метод connect принимает 2 функции(вообще аргументов может быть 4): первая возвращает состояние, вторая - методы , переносят их в props.
-// Так как функция возвращает компонент высшего порядка, её нужно вызвать повторно, передав базовый компонент React, для того, чтобы конвертировать его в компонент
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+// The connect method accepts 2 functions (there can be 4 arguments in general): the first returns a state, the second - methods, transfer them to props.
+// Since the function returns a higher-order component, it needs to be called again, passing the underlying React component, in order to convert it to a component
+export default connect(mapStateToProps, mapDispatchToProps)(Main);

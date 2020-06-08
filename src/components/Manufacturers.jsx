@@ -2,7 +2,7 @@ import React from 'react'
 
 const Manufacturers = ({checkboxManufacturers, setCheckboxManufacturers}) => {
 
-    // Функция для формирования и помещения в разметку checkboxes c производителями
+    // Function for forming and placing checkboxes with manufacturers in the markup
     const renderLiCheckboxes = (checkboxManufacturers, setCheckboxManufacturers) => {
         let content = [];
         for (let i = 0; i < checkboxManufacturers.length; i++) {

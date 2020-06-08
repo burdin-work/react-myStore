@@ -1,10 +1,9 @@
-// Первоначальное состояние данных, которые будем передавать в reducers
 const initialState = {
     searchQuery: '',
-    // сортировка по умолчанию
+    // default sort
     filterBy: 'all',
     numDisplays: 10,
-    // по умолчание отображаем всех производителей
+    // display all manufacturers by default
     checkboxManufacturers: [
         {name: 'beats', switcher: false},
         {name: 'marshall', switcher: false},
@@ -42,7 +41,7 @@ export default (state = initialState, action) => {
 
             checkboxes = [...state.checkboxManufacturers];
 
-            //action.payload = value  из props; возвращаемое значение state[value] = !state[value]
+            //action.payload = value  from props; return value state[value] = !state[value]
             checkboxes[action.payload].switcher = !checkboxes[action.payload].switcher;
 
             return {

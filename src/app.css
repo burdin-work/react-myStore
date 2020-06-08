@@ -81,7 +81,7 @@ p {
 
 header {
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
-    background: url("/img/bg.jpg") repeat 83% 0%;
+    background: url("/images/bg-header.jpg") repeat 83% 0%;
     outline: none;
     border-radius: 6px;
     transition: 0.2s;
@@ -169,13 +169,13 @@ div.search i {
 }
 
 .phone {
-    background: url('/phone.png') 5px 0 no-repeat;
+    background: url('/images/icons/phone.png') 5px 0 no-repeat;
     background-size: 25px;
     background-color: #fff;
 }
 
 .telegram {
-    background: url('/telegram.png') 10px 1px no-repeat;
+    background: url('/images/icons/telegram.png') 10px 1px no-repeat;
     background-size: 25px;
     background-color: #fff;
 }
@@ -395,11 +395,11 @@ text-decoration: none;
 }
 
 .checkout #user_name {
-    background-image: url(/icon-user.svg);
+    background-image: url('/images/icons/icon-user.svg');
 }
 
 .checkout #user_tel {
-    background-image: url(/icon-phone.svg)
+    background-image: url('/images/icons/icon-phone.svg')
 }
 
 .invisible-cartItems {

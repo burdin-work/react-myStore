@@ -1,19 +1,17 @@
-// Первоначальное состояние данных, которые будем передавать в reducers
 const initialState = {
-    // параметр будет передавать состояние загрузки списка книг, произведенное через reducer
+    // the parameter will pass the list loading status
     isReady: false,
-    // items будет содержать список книг в виде объектов
+    // items will contain a list of goods as objects
     items: null,
     selectedItem: 'nothing...',
 };
 
-// reducer - чистая функция. Получает два параметра: 1- первоначальные состояния и 2- action изменяющее состояния
+// reducer is a pure function. It receives two parameters: 1- initial states and 2- action changing states
 export default (state = initialState, action) => {
     switch (action.type) {
 
         case 'SET_ITEMS':
             return {
-                // копия содежимого массива
                 ...state,
                 items: action.payload,
                 isReady: true

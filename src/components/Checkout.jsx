@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-// будем в GET-запросе вместе с именем и номером телефона, также id покупаемых товаров
+// will be in the GET-request along with the name and phone number, also the id of the purchased goods
 const renderCheckoutItems = (items) => {
 
     let content = [];

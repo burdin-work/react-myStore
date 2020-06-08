@@ -4,7 +4,7 @@
     "title": "Наушники Beats Studio 3 Wireless Blue",
     "author": "beats",
     "description": "Беспроводные Наушники Beats by Dre STUDIO 3",
-    "image": "./img/1.jpg",
+    "image": "./images/goods/1.jpg",
     "price": 3690
   },
   {
@@ -12,7 +12,7 @@
     "title": "Наушники Razer Hammerhead BT",
     "author": "razer",
     "description": "БЕСПРОВОДНАЯ BLUETOOTH ГАРНИТУРА RAZER HAMMERHEAD BTДлительное наслаждение чистым звуком",
-    "image": "./img/2.jpg",
+    "image": "./images/goods/2.jpg",
     "price": 2300
   },
   {
@@ -20,7 +20,7 @@
     "title": "Наушники Apple EarPods с пультом и микрофоном",
     "author": "apple",
     "description": "Оригинальные наушники гарнитура Apple EarPods с пультом дистанционного управления и микрофоном",
-    "image": "./img/3.jpg",
+    "image": "./images/goods/3.jpg",
     "price": 990
   },
   {
@@ -28,7 +28,7 @@
     "title": "Наушники JBL Everest 100 BT Black",
     "author": "jbl",
     "description": "Беспроводные Наушники JBL Everest 100  BluetoothJBL EVEREST 100 - Внутриканальные",
-    "image": "./img/4.jpg",
+    "image": "./images/goods/4.jpg",
     "price": 3190
   },
   {
@@ -36,7 +36,7 @@
     "title": "Наушники Marshall Bluetooth MID A.N.C",
     "author": "marshall",
     "description": "Прикоснись к легенде Marshall:Наушники поставляются в картонной стильной коробке",
-    "image": "./img/5.jpg",
+    "image": "./images/goods/5.jpg",
     "price": 4250
   },
   {
@@ -44,7 +44,7 @@
     "title": "Наушники Beats Studio 3 Wireless Porcelain Rose",
     "author": "beats",
     "description": "Beats by Dre STUDIO 3 WIRELESS  Porcelain-Rose БЕСПРОВОДНЫЕ",
-    "image": "./img/6.jpg",
+    "image": "./images/goods/6.jpg",
     "price": 3690
   },
   {
@@ -52,7 +52,7 @@
     "title": "Наушники Beats Studio 3 Wireless Decade Collection",
     "author": "beats",
     "description": "Beats by Dre STUDIO 3 WIRELESS - The Beats Decade Collection",
-    "image": "./img/7.jpg",
+    "image": "./images/goods/7.jpg",
     "price": 3690
   },
   {
@@ -60,7 +60,7 @@
     "title": "Наушники Beats Solo 3 Wireless Red",
     "author": "beats",
     "description": "Встречайте новые обновленные наушники Beats Solo 3 Wireless RedSolo 3 Wireless",
-    "image": "./img/8.jpg",
+    "image": "./images/goods/8.jpg",
     "price": 3490
   },
   {
@@ -68,7 +68,7 @@
     "title": "Наушники Beats Solo 3 Wireless White",
     "author": "beats",
     "description": "Встречайте новые обновленные наушники Beats Solo 3 Wireless Белые новинка 2018 года.",
-    "image": "./img/9.jpg",
+    "image": "./images/goods/9.jpg",
     "price": 3490
   },
   {
@@ -76,7 +76,7 @@
     "title": "Наушники Beats Studio 2 Wireless Alexander Wang",
     "author": "beats",
     "description": "Наушники Studio Wireless New Alexander Wang – это беспрерывная работа до 12 часов",
-    "image": "./img/10.jpg",
+    "image": "./images/goods/10.jpg",
     "price": 2890
   },
   {
@@ -84,7 +84,7 @@
     "title": "Наушники Beats Studio 2 Wireless Blue",
     "author": "beats",
     "description": "Наушники Studio Wireless New Blue – это беспрерывная работа до 12 часов и приём сигнала",
-    "image": "./img/11.jpg",
+    "image": "./images/goods/11.jpg",
     "price": 2890
   },
   {
@@ -92,7 +92,7 @@
     "title": "Наушники Beats Studio 2 Wireless MCM",
     "author": "beats",
     "description": "Наушники Studio Wireless New MCM Беспроводные – это беспрерывная работа до 12 часов",
-    "image": "./img/12.jpg",
+    "image": "./images/goods/12.jpg",
     "price": 2690
   },
   {
@@ -100,7 +100,7 @@
     "title": "Наушники Beats Studio 2 Wireless PIGALLE Special Edition",
     "author": "beats",
     "description": "Наушники Studio Wireless PIGALE Беспроводные – это беспрерывная работа до 12 часов",
-    "image": "./img/13.jpg",
+    "image": "./images/goods/13.jpg",
     "price": 2798
   },
   {
@@ -108,7 +108,7 @@
     "title": "Наушники Beats Studio 2 Wireless White",
     "author": "beats",
     "description": "Наушники Studio Wireless New White – это беспрерывная работа до 12 часов и приём сигнала",
-    "image": "./img/14.jpg",
+    "image": "./images/goods/14.jpg",
     "price": 3700
   },
   {
@@ -116,7 +116,7 @@
     "title": "Наушники Beats urBeats Black ControlTalk",
     "author": "beats",
     "description": "Наушники BEATS by Dr.Dre URBEATS Black ControlTalkОбновленная модификация известных вам наушников",
-    "image": "./img/15.jpg",
+    "image": "./images/goods/15.jpg",
     "price": 1400
   },
   {
@@ -124,7 +124,7 @@
     "title": "Наушники Beats Studio 3 Wireless Blue",
     "author": "beats",
     "description": "Наушники BEATS by Dr.Dre URBEATS Blue ControlTalkОбновленная модификация известных вам наушников",
-    "image": "./img/16.jpg",
+    "image": "./images/goods/16.jpg",
     "price": 3290
   },
   {
@@ -132,7 +132,7 @@
     "title": "Наушники Beats urBeats Gold ControlTalk",
     "author": "beats",
     "description": "Наушники BEATS by Dr.Dre URBEATS Gold ControlTalkОбновленная модификация",
-    "image": "./img/17.jpg",
+    "image": "./images/goods/17.jpg",
     "price": 1400
   },
   {
@@ -140,7 +140,7 @@
     "title": "Наушники Beats urBeats Silver ControlTalk",
     "author": "beats",
     "description": "Наушники BEATS by Dr.Dre URBEATS Silver ControlTalkОбновленная модификация",
-    "image": "./img/18.jpg",
+    "image": "./images/goods/18.jpg",
     "price": 1400
   },
   {
@@ -148,7 +148,7 @@
     "title": "Наушники Beats X White",
     "author": "beats",
     "description": "Беспроводные наушники BeatsX Белые станут вашим верным спутником — чем бы вы ни занимались",
-    "image": "./img/19.jpg",
+    "image": "./images/goods/19.jpg",
     "price": 4900
   },
   {
@@ -156,7 +156,7 @@
     "title": "Наушники BeatsX Black",
     "author": "beats",
     "description": "Беспроводные наушники BeatsX черные станут вашим верным спутником — чем бы вы ни занимались",
-    "image": "./img/20.jpg",
+    "image": "./images/goods/20.jpg",
     "price": 3600
   },
   {
@@ -164,7 +164,7 @@
     "title": "Наушники PowerBeats 3 Wireless Black Matte",
     "author": "beats",
     "description": "Черные наушники Powerbeats 3 Black с увеличенным сроком работы от аккумулятора до 12 часов ",
-    "image": "./img/21.jpeg",
+    "image": "./images/goods/21.jpeg",
     "price": 2900
   },
   {
@@ -172,7 +172,7 @@
     "title": "Наушники Beats Solo 3 Wireless Black",
     "author": "beats",
     "description": "Встречайте новые обновленные наушники Beats Solo 3 Wireless Черный-глянец новинка 2018",
-    "image": "./img/22.jpg",
+    "image": "./images/goods/22.jpg",
     "price": 3490
   },
   {
@@ -180,7 +180,7 @@
     "title": "Беспроводная колонка Beats Pill 2.0 Black",
     "author": "beats",
     "description": "Без лишних проводов! Нажимай, подключай и слушай!Невероятное Легкое сопряжение.",
-    "image": "./img/23.jpg",
+    "image": "./images/goods/23.jpg",
     "price": 3600
   },
   {
@@ -188,7 +188,7 @@
     "title": "Беспроводная колонка Beats Pill 2.0 Red",
     "author": "beats",
     "description": "Без лишних проводов! Нажимай, подключай и слушай!Невероятное Легкое сопряжение.",
-    "image": "./img/24.jpg",
+    "image": "./images/goods/24.jpg",
     "price": 3600
   },
   {
@@ -196,7 +196,7 @@
     "title": "Беспроводная колонка Beats Pill 2.0 Silver",
     "author": "beats",
     "description": "Без лишних проводов! Нажимай, подключай и слушай!Невероятное Легкое сопряжение.",
-    "image": "./img/25.jpg",
+    "image": "./images/goods/25.jpg",
     "price": 3650
   },
   {
@@ -204,7 +204,7 @@
     "title": "Наушники Beats By Dre Tour Black",
     "author": "beats",
     "description": "КОМПАКТНЫЕ И ПОРТАТИВНЫЕ.Beats Tour были разработаны для прослушивания музыки любой интенсивности",
-    "image": "./img/26.jpg",
+    "image": "./images/goods/26.jpg",
     "price": 1980
   },
   {
@@ -212,7 +212,7 @@
     "title": "Наушники Beats By Dre Tour White",
     "author": "beats",
     "description": "КОМПАКТНЫЕ И ПОРТАТИВНЫЕ.Beats Tour были разработаны для прослушивания музыки любой интенсивности",
-    "image": "./img/27.jpg",
+    "image": "./images/goods/27.jpg",
     "price": 1980
   },
   {
@@ -220,7 +220,7 @@
     "title": "Наушники Beats Studio 2.0 Wireless Michael Phelps",
     "author": "beats",
     "description": "Наушники Beats Studio 2.0 Wireless Michael Phelps Unity Edition Black Беспроводные",
-    "image": "./img/28.jpg",
+    "image": "./images/goods/28.jpg",
     "price": 4500
   },
   {
@@ -228,7 +228,7 @@
     "title": "Наушники Beats Studio 2.0 Wireless Michael Phelps",
     "author": "beats",
     "description": "Наушники Beats Studio 2.0 Wireless Michael Phelps Unity Edition Gold Беспроводные",
-    "image": "./img/29.jpg",
+    "image": "./images/goods/29.jpg",
     "price": 4500
   },
   {
@@ -236,7 +236,7 @@
     "title": "Наушники Beats Studio White",
     "author": "beats",
     "description": "Наушники Beats By Dre Studio БелыеДОСТАТОЧНО МОЩНЫЕ, ЧТОБЫ ЗАГЛУШИТЬ ЗВУК РЕАКТИВНОГО ДВИГАТЕЛЯ",
-    "image": "./img/30.jpg",
+    "image": "./images/goods/30.jpg",
     "price": 5290
   },
   {
@@ -244,7 +244,7 @@
     "title": "Наушники JBL Everest 100 BT Black",
     "author": "jbl",
     "description": "Беспроводные Наушники JBL Everest 100  BluetoothJBL EVEREST 100",
-    "image": "./img/31.jpg",
+    "image": "./images/goods/31.jpg",
     "price": 3190
   },
   {
@@ -252,7 +252,7 @@
     "title": "Наушники JBL Everest 100 BT White",
     "author": "jbl",
     "description": "Беспроводные Наушники JBL Everest 100  Bluetooth БелыеJBL EVEREST 100 ",
-    "image": "./img/32.jpg",
+    "image": "./images/goods/32.jpg",
     "price": 3190
   },
   {
@@ -260,7 +260,7 @@
     "title": "Наушники Marshall Major III Bluetooth Black",
     "author": "marshall",
     "description": "Особенности: Большие 40-мм динамики с возможностью настройки звукаБеспроводная технология",
-    "image": "./img/33.jpg",
+    "image": "./images/goods/33.jpg",
     "price": 2390
   },
   {
@@ -268,7 +268,7 @@
     "title": "Наушники Marshall Mode EQ Black",
     "author": "marshall",
     "description": "Особенности: Разработанные MarshallВысококачественный звук.",
-    "image": "./img/34.jpg",
+    "image": "./images/goods/34.jpg",
     "price": 1100
   },
   {
@@ -276,7 +276,7 @@
     "title": "Наушники Monster Diesel VEKTR On-Ear Black",
     "author": "beats",
     "description": "Наушники Monster Diesel VEKTR On-Ear ЧерныеНаушники Monster Diesel VEKTR ",
-    "image": "./img/35.jpg",
+    "image": "./images/goods/35.jpg",
     "price": 7290
   },
   {
@@ -284,7 +284,7 @@
     "title": "Наушники MONSTER NCredible NErgy",
     "author": "beats",
     "description": "Описание наушников Monster Beats NCredible NErgy:Наушники NCredible NErgy",
-    "image": "./img/36.jpg",
+    "image": "./images/goods/36.jpg",
     "price": 990
   },
   {
@@ -292,7 +292,7 @@
     "title": "Наушники-гарнитура JBL In-Ear Headphone J33a Black",
     "author": "jbl",
     "description": "Наушники Гарнитура JBL In-Ear Headphone J33a BlackIn-Ear Headphone J33A Black",
-    "image": "./img/37.png",
+    "image": "./images/goods/37.png",
     "price": 1200
   },
   {
@@ -300,7 +300,7 @@
     "title": "Наушники Razer Adaro In Ear",
     "author": "razer",
     "description": "Наушники Razer Adaro In Ear Разработанные в соответствии с самыми точными стандартами",
-    "image": "./img/38.jpg",
+    "image": "./images/goods/38.jpg",
     "price": 890
   },
   {
@@ -308,7 +308,7 @@
     "title": "Наушники Razer Hammerhead Bluetooth",
     "author": "razer",
     "description": "динамики Razer Hammerhead BT  позволяют наслаждаться громким и чистым звуком. Каждый динамик настраивается вручную",
-    "image": "./img/39.jpg",
+    "image": "./images/goods/39.jpg",
     "price": 2999
   },
   {
@@ -316,7 +316,7 @@
     "title": "Наушники Razer Hammerhead Pro",
     "author": "razer",
     "description": "Наушники Razer Hammerhead ProНаушники с микрофоном Razer Hammerhead Pro",
-    "image": "./img/40.jpg",
+    "image": "./images/goods/40.jpg",
     "price": 1350
   },
   {
@@ -324,7 +324,7 @@
     "title": "Наушники Razer Hammerhead Pro v2",
     "author": "razer",
     "description": "Наушники Razer Hammerhead Pro v2Внешний вид гарнитуры Razer Hammerhead Pro v2",
-    "image": "./img/41.jpg",
+    "image": "./images/goods/41.jpg",
     "price": 989
   },
   {
@@ -332,7 +332,7 @@
     "title": "Наушники Marshall Mode Black",
     "author": "marshall",
     "description": "Гарнитура Marshall Mode подходят для работы с iPhone/iPod/iPad",
-    "image": "./img/42.jpg",
+    "image": "./images/goods/42.jpg",
     "price": 999
   },
   {
@@ -340,7 +340,7 @@
     "title": "Беспроводная акустика JBL Charge 3 Black",
     "author": "jbl",
     "description": "Беспроводная акустика JBL Charge 3 – хороший выбор для людей, ведущих активный образ жизни.",
-    "image": "./img/43.jpg",
+    "image": "./images/goods/43.jpg",
     "price": 4270
   },
   {
@@ -348,7 +348,7 @@
     "title": "Беспроводная акустика JBL Charge 3 Blue",
     "author": "jbl",
     "description": "Беспроводная акустика JBL Charge 3 – хороший выбор для людей, ведущих активный образ жизни.",
-    "image": "./img/44.jpeg",
+    "image": "./images/goods/44.jpeg",
     "price": 4270
   },
   {
@@ -356,7 +356,7 @@
     "title": "Беспроводная акустика JBL Charge 3 Red",
     "author": "jbl",
     "description": "Беспроводная акустика JBL Charge 3 – хороший выбор для людей, ведущих активный образ жизни.",
-    "image": "./img/45.jpg",
+    "image": "./images/goods/45.jpg",
     "price": 4270
   }
 ]

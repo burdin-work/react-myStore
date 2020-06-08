@@ -4,7 +4,7 @@ import * as cartActions  from '../actions/cart';
 import * as itemsActions  from '../actions/goods';
 import Card from '../components/Card';
 
-// получаем cart из reducers\cart.js и id из props самого объекта-книги
+// get cart from reducers\cart.js and id from props object itself
 const mapStateToProps = (story, ownProps) => {
 
 

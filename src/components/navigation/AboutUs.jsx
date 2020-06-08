@@ -1,6 +1,6 @@
 import React from 'react';
 
-const About_Us = () => {
+const AboutUs = () => {
     return (
         <div className="other_pages">
             <h1>О нас</h1>
@@ -29,4 +29,4 @@ const About_Us = () => {
     );
 };
 
-export default About_Us;
+export default AboutUs;

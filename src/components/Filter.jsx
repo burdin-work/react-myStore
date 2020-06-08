@@ -3,7 +3,7 @@ import { Dropdown} from 'semantic-ui-react'
 
 const Filter = ({setFilter, filterBy, searchQuery, setSearchQuery, setDisplaying}) => {
 
-    // всплывающий список для сортировки (Dropdown из semantic ui)
+    // sort popup list (Dropdown from semantic ui)
     const optionsSorting = [
         {key: 1, text: 'Все', value: 'all'},
         {key: 2, text: 'От дорогих к дешевым', value: 'price_high'},

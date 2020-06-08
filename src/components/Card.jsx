@@ -3,7 +3,7 @@ import {Card, Image, Button} from 'semantic-ui-react';
 import {Link} from "react-router-dom";
 
 
-// параметры будут браться из props
+// parameters will be taken from props
 const ItemCard = (props) => {
     const {title, description, price, image, addToCart, addedCount, openSelectedItem} = props;
 
