@@ -16,6 +16,7 @@ import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 // Provider - helper component method for combining react and redux
 import {Provider} from 'react-redux';
 import Checkout from "./containers/Checkout";
+import SelectedItem from "./containers/SelectedItem";
 
 
 // the default function is called from ./store.js (storage is being created), putting into a variable for use in a common component Provider
@@ -51,6 +52,10 @@ const App = () => {
                                 <Route path="/checkout" component={Checkout}/>
 
                                 <Route path="/:filter?">
+                                    <Main/>
+                                </Route>
+
+                                <Route path="/">
                                     <Main/>
                                 </Route>
 

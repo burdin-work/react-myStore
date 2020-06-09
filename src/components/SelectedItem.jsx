@@ -21,20 +21,22 @@ const SelectedItem = (props) => {
                         </div>
                         <ul className="list-group list-group-flush">
                             <li className="list-group-item">{selectedItem.description}</li>
-                            <li className="list-group-item"> </li>
+                            <li className="list-group-item"></li>
                             <li className="list-group-item">Цена: <b>{selectedItem.price} грн</b></li>
-                            <li className="list-group-item"> </li>
+                            <li className="list-group-item"></li>
                             <li className="list-group-item">Код товара: {selectedItem.id}</li>
+                            <li className="list-group-item"></li>
                         </ul>
                         <div className="button-wrap card__button"><Link to="/"><Button
                             onClick={addToCart.bind(this, newProps)}>Добавить в
-                            корзину {addedCount > 0 && `(${addedCount})`}</Button></Link></div>
+                            корзину {addedCount > 0 && `(${addedCount})`}</Button></Link>
+                        </div>
                     </div>
                 </div>
             </div>
         );
     } else {
-        return <div> </div>
+        return <div></div>
     }
 };
 

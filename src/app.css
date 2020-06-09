@@ -10,7 +10,7 @@ body {
     color: rgb(100, 100, 100);
     font-family: 'Open Sans';
     overflow-y: scroll;
-    min-width: 480px;
+    min-width: 500px;
 }
 
 ul {
@@ -633,10 +633,6 @@ div.ui.cards > .card > .content {
     filter: saturate(130%);
 }
 
-div.ui.card span.date {
-
-}
-
 
 /* Contacts */
 .contacts > dl > div {
@@ -693,7 +689,7 @@ dd {
     justify-content: space-between;
     flex-wrap: nowrap;
     margin-bottom: 100px;
-    max-height: 70vh;
+    /*max-height: 70vh;*/
 
 }
 
@@ -703,7 +699,6 @@ dd {
     height: auto;
     max-width: 100%;
     min-width: 200px;
-    max-height: 70vh;
 }
 
 .selected-item .product-list {
@@ -731,19 +726,8 @@ dd {
 }
 
 .card__button .ui.button {
-    padding: 1em .4em;
+    padding: 14px 7px;
 }
-
-
-/* FOOTER */
-.footer {
-    margin-top: 100px;
-    /* Остальные свойства */
-    width: 100%;
-    background-color: rgba(168, 158, 158, .45);
-    box-shadow: 0 0 1px rgba(0, 0, 0, .4);
-}
-
 
 /* Button MoreGoods */
 
@@ -771,9 +755,19 @@ dd {
 }
 
 
+
+
+
 /* FOOTER */
+/*.footer {
+    margin-top: 100px;
+    width: 100%;
+    background-color: rgba(168, 158, 158, .45);
+    box-shadow: 0 0 1px rgba(0, 0, 0, .4);
+}*/
+
 footer {
-    margin-top: 60px;
+    margin-top: 20px;
     padding: 10px 0;
     background-color: #fff;
 }
@@ -949,7 +943,11 @@ footer li:last-child {
     }
 
     .dropdown-panel {
+        margin-top: 10px;
         margin-left: 0;
+    }
+
+    .selected-item .card {
     }
 
 
