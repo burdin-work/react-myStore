@@ -47,29 +47,27 @@ class Main extends Component {
 
         return (
             <div>
-                <Router>
-                    <main>
-                        <Switch>
-                            <Route path="/:id" component={SelectedItem}/>
-                            <Route path="/">
-                                <Manufacturers/>
-                                <div>
-                                    <Filter/>
-                                    <Card.Group itemsPerRow={3}>
-                                        {!isReady
-                                            ? 'Загрузка...'
-                                            : goods.map((item, i) => (
-                                                <ItemCard key={i} {...item} />
-                                            ))
-                                        }
-                                    </Card.Group>
-                                    {showButtMoreGoods(goods, numDisplays)}
-                                </div>
-                            </Route>
+                <main>
+                    <Switch>
+                        <Route path="/:id" render={(props) => <SelectedItem {...props}/>}/>
 
-                        </Switch>
-                    </main>
-                </Router>
+                        <Route path="/">
+                            <Manufacturers/>
+                            <div>
+                                <Filter/>
+                                <Card.Group itemsPerRow={3}>
+                                    {!isReady
+                                        ? 'Загрузка...'
+                                        : goods.map((item, i) => (
+                                            <ItemCard key={i} {...item} />
+                                        ))
+                                    }
+                                </Card.Group>
+                                {showButtMoreGoods(goods, numDisplays)}
+                            </div>
+                        </Route>
+                    </Switch>
+                </main>
             </div>
         )
     }

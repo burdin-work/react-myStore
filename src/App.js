@@ -17,6 +17,8 @@ import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import {Provider} from 'react-redux';
 import Checkout from "./containers/Checkout";
 import SelectedItem from "./containers/SelectedItem";
+import Manufacturers from "./components/Main";
+import {Card} from "semantic-ui-react/dist/commonjs/views/Card";
 
 
 // the default function is called from ./store.js (storage is being created), putting into a variable for use in a common component Provider
@@ -50,10 +52,6 @@ const App = () => {
                                 </Route>
 
                                 <Route path="/checkout" component={Checkout}/>
-
-                                <Route path="/:filter?">
-                                    <Main/>
-                                </Route>
 
                                 <Route path="/">
                                     <Main/>
